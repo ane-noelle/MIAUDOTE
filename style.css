@@ -1,0 +1,154 @@
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:#f5efe6;
+}
+
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:#eaeaea;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700;
+color:#a855f7;
+}
+
+.logo img{
+width:40px;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.btn-topo{
+background:#ff6fa5;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+}
+
+/* TEXTO */
+.texto{
+max-width:520px;
+}
+
+.texto h1{
+font-size:56px;
+color:#a855f7;
+line-height:1.1;
+}
+
+.texto span{
+color:#ff6fa5;
+}
+
+.texto p{
+margin:20px 0;
+color:#444;
+}
+
+/* BOTÕES */
+.botoes{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.btn-rosa{
+background:#ff6fa5;
+color:white;
+border:none;
+padding:14px 22px;
+border-radius:30px;
+cursor:pointer;
+font-weight:500;
+}
+
+.btn-busca{
+background:#eee;
+border:none;
+padding:14px 22px;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* INFOS (NÚMEROS IGUAIS AO FIGMA) */
+.infos{
+display:flex;
+gap:60px;
+margin-top:40px;
+}
+
+.infos h3{
+font-size:32px; /* TAMANHO IGUAL AO PRINT */
+color:#2bbbad;
+margin:0;
+}
+
+.infos p{
+font-size:14px;
+color:#555;
+}
+
+/* IMAGEM */
+.imagem img{
+width:420px;
+border-radius:30px;
+position:relative;
+}
+
+/* EFEITO FUNDO VERDE ATRÁS DA IMAGEM */
+.imagem{
+position:relative;
+}
+
+.imagem::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:#2bbbad;
+border-radius:30px;
+top:10px;
+left:-10px;
+z-index:-1;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.imagem img{
+width:100%;
+margin-top:20px;
+}
+
+.infos{
+justify-content:center;
+}
+}
