@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Miaudote</title>
-<link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
 
 <div class="logo">
@@ -28,6 +30,7 @@
 
 </header>
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="texto">
@@ -42,7 +45,9 @@ Encontre o companheiro perfeito para sua família. Milhares de animais estão es
 </p>
 
 <div class="botoes">
+<a href="#pets">
 <button class="btn-rosa">💗 Adotar Agora</button>
+</a>
 <button class="btn-busca">🔍 Buscar Pets</button>
 </div>
 
@@ -69,6 +74,121 @@ Encontre o companheiro perfeito para sua família. Milhares de animais estão es
 
 <div class="imagem">
 <img src="imagens/cachorro.jpg">
+</div>
+
+</section>
+
+<!-- FILTROS -->
+<section class="filtros">
+
+<select>
+<option value="">🔍 Selecione a cidade</option>
+<option>São Paulo - SP</option>
+<option>Campinas - SP</option>
+<option>Rio de Janeiro - RJ</option>
+<option>Belo Horizonte - MG</option>
+</select>
+
+<select>
+<option>Todos</option>
+<option>Cão</option>
+<option>Gato</option>
+</select>
+
+<select>
+<option>Todos</option>
+<option>Pequeno</option>
+<option>Médio</option>
+<option>Grande</option>
+</select>
+
+</section>
+
+<!-- PETS -->
+<section id="pets" class="pets-lista">
+
+<div class="pet-card">
+<img src="imagens/cachorro.jpg">
+<span class="tag">Cão</span>
+<div class="idade">3 anos</div>
+
+<h3>Max</h3>
+<p>Golden Retriever</p>
+<p>📍 São Paulo, SP</p>
+
+<div class="tags">
+<span>Carinhoso</span>
+<span>Brincalhão</span>
+</div>
+
+<div class="status">
+<span>✔ Vacinado</span>
+<span>✔ Castrado</span>
+</div>
+
+</div>
+
+<div class="pet-card">
+<img src="imagens/luna.jpg">
+<span class="tag">Gato</span>
+<div class="idade">2 anos</div>
+
+<h3>Luna</h3>
+<p>Gato Laranja</p>
+<p>📍 Rio de Janeiro, RJ</p>
+
+<div class="tags">
+<span>Independente</span>
+<span>Calma</span>
+</div>
+
+<div class="status">
+<span>✔ Vacinado</span>
+<span>✔ Castrado</span>
+</div>
+
+</div>
+
+<div class="pet-card">
+<img src="imagens/bob.jpg">
+<span class="tag">Cão</span>
+<div class="idade">4 anos</div>
+
+<h3>Bob</h3>
+<p>Beagle</p>
+<p>📍 Belo Horizonte, MG</p>
+
+<div class="tags">
+<span>Energético</span>
+<span>Sociável</span>
+</div>
+
+<div class="status">
+<span>✔ Vacinado</span>
+<span>✖ Castrado</span>
+</div>
+</div>
+
+<div class="pet-card">
+<img src="imagens/mimi.jpg">
+<span class="tag">Gato</span>
+<div class="idade">1 ano</div>
+
+<h3>Mimi</h3>
+<p>Gato Siamês</p>
+<p>📍 Campinas, SP</p>
+
+<div class="tags">
+<span>Carinhosa</span>
+<span>Calma</span>
+</div>
+
+<div class="status">
+<span>✔ Vacinado</span>
+<span>✔ Castrado</span>
+</div>
+</div>
+
 </div>
 
 </section>

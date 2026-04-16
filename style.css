@@ -29,7 +29,6 @@ nav a{
 margin:0 15px;
 text-decoration:none;
 color:#333;
-font-weight:500;
 }
 
 .btn-topo{
@@ -49,15 +48,13 @@ align-items:center;
 padding:60px;
 }
 
-/* TEXTO */
 .texto{
-max-width:520px;
+max-width:500px;
 }
 
 .texto h1{
-font-size:56px;
+font-size:55px;
 color:#a855f7;
-line-height:1.1;
 }
 
 .texto span{
@@ -73,7 +70,6 @@ color:#444;
 .botoes{
 display:flex;
 gap:15px;
-margin-top:20px;
 }
 
 .btn-rosa{
@@ -83,7 +79,6 @@ border:none;
 padding:14px 22px;
 border-radius:30px;
 cursor:pointer;
-font-weight:500;
 }
 
 .btn-busca{
@@ -94,7 +89,7 @@ border-radius:30px;
 cursor:pointer;
 }
 
-/* INFOS (NÚMEROS IGUAIS AO FIGMA) */
+/* INFOS */
 .infos{
 display:flex;
 gap:60px;
@@ -102,7 +97,7 @@ margin-top:40px;
 }
 
 .infos h3{
-font-size:32px; /* TAMANHO IGUAL AO PRINT */
+font-size:32px;
 color:#2bbbad;
 margin:0;
 }
@@ -113,15 +108,13 @@ color:#555;
 }
 
 /* IMAGEM */
-.imagem img{
-width:420px;
-border-radius:30px;
+.imagem{
 position:relative;
 }
 
-/* EFEITO FUNDO VERDE ATRÁS DA IMAGEM */
-.imagem{
-position:relative;
+.imagem img{
+width:420px;
+border-radius:30px;
 }
 
 .imagem::before{
@@ -134,6 +127,87 @@ border-radius:30px;
 top:10px;
 left:-10px;
 z-index:-1;
+}
+
+/* FILTROS */
+.filtros{
+display:flex;
+gap:20px;
+padding:30px;
+justify-content:center;
+background:#fff;
+border-radius:15px;
+margin:40px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filtros input,
+.filtros select{
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+width:250px;
+}
+
+.pets-lista{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap:30px;
+padding:40px;
+}
+
+.pet-card{
+background:white;
+border-radius:20px;
+padding:15px;
+width:300px; /* largura fixa */
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+position:relative;
+}
+
+.pet-card img{
+width:100%;
+height:220px; /* altura maior = formato retangular */
+object-fit:cover;
+border-radius:15px;
+}
+.tag{
+position:absolute;
+top:15px;
+left:15px;
+background:#ff6fa5;
+color:white;
+padding:5px 10px;
+border-radius:15px;
+font-size:12px;
+}
+
+.idade{
+position:absolute;
+top:15px;
+right:15px;
+background:#eee;
+padding:5px 10px;
+border-radius:10px;
+font-size:12px;
+}
+
+.tags{
+margin-top:10px;
+}
+
+.tags span{
+background:#eee;
+padding:5px 8px;
+border-radius:10px;
+margin-right:5px;
+font-size:12px;
+}
+
+.status{
+margin-top:10px;
+font-size:12px;
+color:#a855f7;
 }
 
 /* RESPONSIVO */
@@ -150,5 +224,10 @@ margin-top:20px;
 
 .infos{
 justify-content:center;
+}
+
+.filtros{
+flex-direction:column;
+align-items:center;
 }
 }
