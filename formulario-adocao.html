@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formulário de Adoção | Miaudote</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="pet-page">
+
+<header class="header">
+
+<div class="logo">
+<img src="imagens/logo.png">
+<span>MIAUDOTE</span>
+</div>
+
+<a href="index.html">
+<button class="btn-topo">Voltar</button>
+</a>
+
+</header>
+
+
+<section class="formulario-area">
+
+<div class="form-box">
+
+<h1>Formulário de Adoção</h1>
+<p>
+Preencha os dados abaixo para iniciar seu pedido de adoção.
+</p>
+
+
+<form id="adocaoForm">
+
+<label>Nome Completo *</label>
+<input type="text" required placeholder="Seu nome completo">
+
+
+<label>E-mail *</label>
+<input type="email" required placeholder="seu@email.com">
+
+
+<label>Telefone *</label>
+<input type="tel" required placeholder="(00) 00000-0000">
+
+
+<label>Cidade *</label>
+<input type="text" required placeholder="Cidade onde você mora">
+
+
+<label>Endereço *</label>
+<input type="text" required placeholder="Rua, número, bairro">
+
+
+<label>Qual animal deseja adotar?</label>
+
+<select required>
+<option>Selecione</option>
+<option>Max</option>
+<option>Luna</option>
+<option>Bob</option>
+<option>Mimi</option>
+<option>Thor</option>
+<option>Mel</option>
+</select>
+
+
+<label>Por que deseja adotar esse pet?</label>
+
+<textarea
+rows="6"
+placeholder="Conte-nos um pouco sobre você e porque deseja adotar..."
+></textarea>
+
+
+
+<div class="botoes-form">
+
+<a href="index.html">
+<button type="button" class="cancelar">
+Cancelar
+</button>
+</a>
+
+<button type="submit" class="enviar">
+Enviar Pedido
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
