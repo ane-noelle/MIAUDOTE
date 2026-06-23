@@ -1,218 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<title>Miaudote</title>
+    <meta charset="UTF-8">
+    <title>Miaudote</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
+    <!-- HEADER -->
+    <header class="header">
 
-<a href="index.html" class="logo">
-<img src="imagens/logo.png">
-<span>MIAUDOTE</span>
-</a>
+        <a href="index.html" class="logo">
+            <img src="imagens/logo.png" alt="Logo">
+            <span>MIAUDOTE</span>
+        </a>
 
-<nav>
+        <nav>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="como-funciona.html">Como Funciona</a>
+            <a href="contato.html">Contato</a>
+        </nav>
 
+        <a href="formulario-adocao.html" class="btn-topo">
+            💗 Adotar
+        </a>
 
-<a href="sobre.html">
-Sobre Nós
-</a>
+    </header>
 
-<a href="como-funciona.html">Como Funciona</a>
+    <!-- HERO -->
+    <section class="hero">
 
-<a href="contato.html">Contato</a>
-</nav>
+        <div class="texto">
 
-<button class="btn-topo">💗 Adotar</button>
+            <h1>
+                Adote um Amigo,<br>
+                <span>Mude uma Vida</span>
+            </h1>
 
-</header>
+            <p>
+                Encontre o companheiro perfeito para sua família.
+                Milhares de animais estão esperando por um lar cheio
+                de amor e carinho.
+            </p>
 
-<!-- HERO -->
-<section class="hero">
+            <div class="botoes">
 
-<div class="texto">
+                <a href="formulario-adocao.html">
+                    <button class="btn-rosa">
+                        ♡ Adotar Agora
+                    </button>
+                </a>
 
-<h1>
-Adote um Amigo, <br>
-<span>Mude uma Vida</span>
-</h1>
+                <a href="#pets">
+                    <button class="btn-busca">
+                        🔍 Buscar Pets
+                    </button>
+                </a>
 
-<p>
-Encontre o companheiro perfeito para sua família. Milhares de animais estão esperando por um lar cheio de amor e carinho.
-</p>
+            </div>
 
-<div class="botoes">
-<a href="#pets">
-<a href="formulario-adocao.html">
-<button class="btn-rosa">
-♡ Adotar Agora
-</button>
-</a>
-</a>
-<a href="#pets">
-<button class="btn-busca">
-🔍 Buscar Pets
-</button>
-</a>
-</div>
+            <div class="infos">
 
-<div class="infos">
+                <div>
+                    <h3>500+</h3>
+                    <p>Adoções Realizadas</p>
+                </div>
 
-<div>
-<h3>500+</h3>
-<p>Adoções Realizadas</p>
-</div>
+                <div>
+                    <h3>200+</h3>
+                    <p>Pets Disponíveis</p>
+                </div>
 
-<div>
-<h3>200+</h3>
-<p>Pets Disponíveis</p>
-</div>
+                <div>
+                    <h3>98%</h3>
+                    <p>Famílias Felizes</p>
+                </div>
 
-<div>
-<h3>98%</h3>
-<p>Famílias Felizes</p>
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+        <div class="imagem">
+            <img src="imagens/cachorro.jpg" alt="Golden Retriever">
+        </div>
 
-<div class="imagem">
-<img src="imagens/cachorro.jpg">
-</div>
+    </section>
 
-</section>
+    <!-- FILTROS -->
+    <section class="filtros">
 
-<!-- FILTROS -->
-<section class="filtros">
+        <select>
+            <option value="">🔍 Selecione a cidade</option>
+            <option>São Paulo - SP</option>
+            <option>Campinas - SP</option>
+            <option>Rio de Janeiro - RJ</option>
+            <option>Belo Horizonte - MG</option>
+        </select>
 
-<select>
-<option value="">🔍 Selecione a cidade</option>
-<option>São Paulo - SP</option>
-<option>Campinas - SP</option>
-<option>Rio de Janeiro - RJ</option>
-<option>Belo Horizonte - MG</option>
-</select>
+        <select>
+            <option>Todos</option>
+            <option>Cão</option>
+            <option>Gato</option>
+        </select>
 
-<select>
-<option>Todos</option>
-<option>Cão</option>
-<option>Gato</option>
-</select>
+        <select>
+            <option>Todos</option>
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+        </select>
 
-<select>
-<option>Todos</option>
-<option>Pequeno</option>
-<option>Médio</option>
-<option>Grande</option>
-</select>
+    </section>
 
-</section>
+    <!-- PETS -->
+    <section id="pets" class="pets-lista">
 
-<!-- PETS -->
-<section id="pets" class="pets-lista">
+        <!-- MAX -->
+        <div class="pet-card">
 
-<div class="pet-card">
-<img src="imagens/cachorro.jpg">
-<span class="tag">Cão</span>
-<div class="idade">3 anos</div>
+            <img src="imagens/cachorro.jpg" alt="Max">
 
-<h3>
-<a href="detalhesmax.html">Max</a>
-</h3>
-<p>Golden Retriever</p>
-<p>📍 São Paulo, SP</p>
+            <span class="tag">Cão</span>
 
-<div class="tags">
-<span>Carinhoso</span>
-<span>Brincalhão</span>
-</div>
+            <div class="idade">3 anos</div>
 
-<div class="status">
-<span>✔ Vacinado</span>
-<span>✔ Castrado</span>
-</div>
+            <h3>
+                <a href="detalhesmax.html">Max</a>
+            </h3>
 
-</div>
+            <p>Golden Retriever</p>
+            <p>📍 São Paulo, SP</p>
 
-<div class="pet-card">
-<img src="imagens/luna.jpg">
-<span class="tag">Gato</span>
-<div class="idade">2 anos</div>
+            <div class="tags">
+                <span>Carinhoso</span>
+                <span>Brincalhão</span>
+            </div>
 
-<h3>
-<a href="detalhe-luna.html">Luna</a>
-</h3>
-<p>Gato Laranja</p>
-<p>📍 Rio de Janeiro, RJ</p>
+            <div class="status">
+                <span>✔ Vacinado</span>
+                <span>✔ Castrado</span>
+            </div>
 
-<div class="tags">
-<span>Independente</span>
-<span>Calma</span>
-</div>
+        </div>
 
-<div class="status">
-<span>✔ Vacinado</span>
-<span>✔ Castrado</span>
-</div>
+        <!-- LUNA -->
+        <div class="pet-card">
 
-</div>
+            <img src="imagens/luna.jpg" alt="Luna">
 
-<div class="pet-card">
-<img src="imagens/bob.jpg">
-<span class="tag">Cão</span>
-<div class="idade">4 anos</div>
+            <span class="tag">Gato</span>
 
-<h3>
-<a href="detalhesbob.html">Bob</a>
-</h3>
-<p>Beagle</p>
-<p>📍 Belo Horizonte, MG</p>
+            <div class="idade">2 anos</div>
 
-<div class="tags">
-<span>Energético</span>
-<span>Sociável</span>
-</div>
+            <h3>
+                <a href="detalhe-luna.html">Luna</a>
+            </h3>
 
-<div class="status">
-<span>✔ Vacinado</span>
-<span>✖ Castrado</span>
-</div>
-</div>
+            <p>Gato Laranja</p>
+            <p>📍 Rio de Janeiro, RJ</p>
 
-<div class="pet-card">
-<img src="imagens/mimi.jpg">
-<span class="tag">Gato</span>
-<div class="idade">1 ano</div>
+            <div class="tags">
+                <span>Independente</span>
+                <span>Calma</span>
+            </div>
 
-<h3>
-<a href="detalhesmimi.html">Mimi</a>
-</h3>
-<p>Gato Siamês</p>
-<p>📍 Campinas, SP</p>
+            <div class="status">
+                <span>✔ Vacinado</span>
+                <span>✔ Castrado</span>
+            </div>
 
-<div class="tags">
-<span>Carinhosa</span>
-<span>Calma</span>
-</div>
+        </div>
 
-<div class="status">
-<span>✔ Vacinado</span>
-<span>✔ Castrado</span>
-</div>
-</div>
+        <!-- BOB -->
+        <div class="pet-card">
 
-</div>
+            <img src="imagens/bob.jpg" alt="Bob">
 
-</section>
+            <span class="tag">Cão</span>
+
+            <div class="idade">4 anos</div>
+
+            <h3>
+                <a href="detalhesbob.html">Bob</a>
+            </h3>
+
+            <p>Beagle</p>
+            <p>📍 Belo Horizonte, MG</p>
+
+            <div class="tags">
+                <span>Energético</span>
+                <span>Sociável</span>
+            </div>
+
+            <div class="status">
+                <span>✔ Vacinado</span>
+                <span>✖ Castrado</span>
+            </div>
+
+        </div>
+
+        <!-- MIMI -->
+        <div class="pet-card">
+
+            <img src="imagens/mimi.jpg" alt="Mimi">
+
+            <span class="tag">Gato</span>
+
+            <div class="idade">1 ano</div>
+
+            <h3>
+                <a href="detalhesmimi.html">Mimi</a>
+            </h3>
+
+            <p>Gato Siamês</p>
+            <p>📍 Campinas, SP</p>
+
+            <div class="tags">
+                <span>Carinhosa</span>
+                <span>Calma</span>
+            </div>
+
+            <div class="status">
+                <span>✔ Vacinado</span>
+                <span>✔ Castrado</span>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
+
 </html>

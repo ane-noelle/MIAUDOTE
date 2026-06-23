@@ -17,51 +17,79 @@ background:#f5efe6;
 
 /* ---------------- HEADER ---------------- */
 
+/* ---------------- HEADER ---------------- */
+
+/* ---------------- HEADER ---------------- */
+/* ---------------- HEADER ---------------- */
+
 .header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 60px;
-background:#eaeaea;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 18px 60px;
+    background: #eaeaea;
+    height: 95px;
 }
 
+/* Logo */
+
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-font-weight:700;
-color:#a855f7;
-font-size:22px;
-text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#8d5cf6;
+    font-size:34px;
+    font-weight:700;
 }
 
 .logo img{
-width:42px;
+    width:60px;
+}
+
+/* MENU CENTRALIZADO */
+
+nav{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+
+    display:flex;
+    gap:45px;
 }
 
 nav a{
-text-decoration:none;
-margin:0 14px;
-color:#333;
-font-weight:500;
-transition:.3s;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
 }
 
 nav a:hover{
-color:#ff6fa5;
+    color:#ff6fa5;
 }
+
+/* BOTÃO ADOTAR */
 
 .btn-topo{
-background:#ff6fa5;
-border:none;
-padding:12px 22px;
-border-radius:30px;
-color:white;
-font-weight:600;
-cursor:pointer;
+    position:absolute;
+    right:60px;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:#ff6fa5;
+    color:white;
+    text-decoration:none;
+    padding:13px 28px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
 }
 
-
+.btn-topo:hover{
+    background:#ff4f96;
+}
 
 /* ---------------- HERO ---------------- */
 
