@@ -1,8 +1,164 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Início";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="hero">
+    <div class="texto">
+        <h1>
+            Adote um Amigo,<br />
+            <span>Mude uma Vida</span>
+        </h1>
+
+        <p>
+            Encontre o companheiro perfeito para sua família.
+            Animais estão esperando por um lar cheio de amor e carinho.
+        </p>
+
+        <div class="botoes">
+    <a href="#pets" class="btn-rosa">♡ Adotar Agora</a>
+    <a href="#pets" class="btn-busca">🔍 Buscar Pets</a>
 </div>
+
+        <div class="infos">
+            <div>
+                <h3>0</h3>
+                <p>Adoções realizadas</p>
+            </div>
+
+            <div>
+                <h3>0</h3>
+                <p>Pets disponíveis</p>
+            </div>
+
+            <div>
+                <h3>100%</h3>
+                <p>Amor pelos animais</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="/imagens/cachorro.jpg" alt="Cachorro disponível para adoção" />
+    </div>
+</section>
+
+<section class="filtros" aria-label="Filtros de animais">
+    <select aria-label="Filtrar por cidade">
+        <option value="">Selecione a cidade</option>
+        <option value="sao-paulo">São Paulo - SP</option>
+        <option value="campinas">Campinas - SP</option>
+        <option value="rio-de-janeiro">Rio de Janeiro - RJ</option>
+        <option value="belo-horizonte">Belo Horizonte - MG</option>
+    </select>
+
+    <select aria-label="Filtrar por espécie">
+        <option value="">Todas as espécies</option>
+        <option value="cao">Cão</option>
+        <option value="gato">Gato</option>
+    </select>
+
+    <select aria-label="Filtrar por porte">
+        <option value="">Todos os portes</option>
+        <option value="pequeno">Pequeno</option>
+        <option value="medio">Médio</option>
+        <option value="grande">Grande</option>
+    </select>
+</section>
+
+<section id="pets" class="pets-lista">
+    <article class="pet-card">
+        <img src="/imagens/cachorro.jpg" alt="Max" />
+
+        <span class="tag">Cão</span>
+        <div class="idade">3 anos</div>
+
+        <h3>
+            <a href="#">Max</a>
+        </h3>
+
+        <p>Golden Retriever</p>
+        <p>📍 São Paulo, SP</p>
+
+        <div class="tags">
+            <span>Carinhoso</span>
+            <span>Brincalhão</span>
+        </div>
+
+        <div class="status">
+            <span>✔ Vacinado</span>
+            <span>✔ Castrado</span>
+        </div>
+    </article>
+
+    <article class="pet-card">
+        <img src="/imagens/luna.jpg" alt="Luna" />
+
+        <span class="tag">Gato</span>
+        <div class="idade">2 anos</div>
+
+        <h3>
+            <a href="#">Luna</a>
+        </h3>
+
+        <p>Gato Laranja</p>
+        <p>📍 Rio de Janeiro, RJ</p>
+
+        <div class="tags">
+            <span>Independente</span>
+            <span>Calma</span>
+        </div>
+
+        <div class="status">
+            <span>✔ Vacinada</span>
+            <span>✔ Castrada</span>
+        </div>
+    </article>
+
+    <article class="pet-card">
+        <img src="/imagens/bob.jpg" alt="Bob" />
+
+        <span class="tag">Cão</span>
+        <div class="idade">4 anos</div>
+
+        <h3>
+            <a href="#">Bob</a>
+        </h3>
+
+        <p>Beagle</p>
+        <p>📍 Belo Horizonte, MG</p>
+
+        <div class="tags">
+            <span>Energético</span>
+            <span>Sociável</span>
+        </div>
+
+        <div class="status">
+            <span>✔ Vacinado</span>
+            <span>✖ Não castrado</span>
+        </div>
+    </article>
+
+    <article class="pet-card">
+        <img src="/imagens/mimi.jpg" alt="Mimi" />
+
+        <span class="tag">Gato</span>
+        <div class="idade">1 ano</div>
+
+        <h3>
+            <a href="#">Mimi</a>
+        </h3>
+
+        <p>Gato Siamês</p>
+        <p>📍 Campinas, SP</p>
+
+        <div class="tags">
+            <span>Carinhosa</span>
+            <span>Calma</span>
+        </div>
+
+        <div class="status">
+            <span>✔ Vacinada</span>
+            <span>✔ Castrada</span>
+        </div>
+    </article>
+</section>
