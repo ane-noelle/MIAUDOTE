@@ -95,6 +95,6 @@ C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\refint\Miaudote.We
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\Miaudote.Web.pdb
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\Miaudote.Web.genruntimeconfig.cache
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\ref\Miaudote.Web.dll
-C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\xtjs0affoq-{0}-jlihiabujq-jlihiabujq.gz
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\10c2rie059-{0}-5ipweew5fc-5ipweew5fc.gz
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\8pnevwdbvv-{0}-igk0vfwf9l-igk0vfwf9l.gz
+C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\xtjs0affoq-{0}-rfzwrcpdln-rfzwrcpdln.gz
