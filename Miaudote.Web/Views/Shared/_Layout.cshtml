@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] | MIAUDOTE</title>
+
+    <link rel="stylesheet"
+          href="~/css/miaudote.css"
+          asp-append-version="true" />
+</head>
+
+<body>
+    <header class="header">
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="logo">
+
+            <img src="~/imagens/logo.png"
+                 alt="Logo do MIAUDOTE" />
+
+            <span>MIAUDOTE</span>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <a href="/Institucional/Sobre">Sobre Nós</a>
+            <a href="/Institucional/ComoFunciona">Como Funciona</a>
+            <a href="/Contato">Contato</a>
+        </nav>
+
+        <a href="/Solicitacoes/Criar"
+           class="btn-topo">
+            ♡ Adotar
+        </a>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>© @DateTime.Now.Year MIAUDOTE</p>
+        <p>Sistema de divulgação e gerenciamento de adoções.</p>
+    </footer>
+
+    <script src="~/js/miaudote.js"
+            asp-append-version="true">
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
