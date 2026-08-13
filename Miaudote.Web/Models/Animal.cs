@@ -109,4 +109,7 @@ public class Animal
 
     public ICollection<AnimalTemperamento> AnimaisTemperamentos { get; set; }
         = new List<AnimalTemperamento>();
+        public ICollection<SolicitacaoAdocao> SolicitacoesAdocao { get; set; }
+    = new List<SolicitacaoAdocao>();
+
 }

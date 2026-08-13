@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Miaudote.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c00678643a8753b5b39625551f7eb36556b59a37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8da48560080b7a4735a713c7ccc5729bde52eef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Miaudote.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Miaudote.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
