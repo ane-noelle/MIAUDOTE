@@ -1,0 +1,23 @@
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Configurações locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Configurações locais do VS Code
+.vscode/
+
+# Configurações locais com possíveis credenciais
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Arquivos do sistema operacional
+Thumbs.db
+.DS_Store
