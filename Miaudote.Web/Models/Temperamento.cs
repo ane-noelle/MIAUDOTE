@@ -22,4 +22,6 @@ public class Temperamento
     [Column("ativo")]
     [Display(Name = "Ativo")]
     public bool Ativo { get; set; } = true;
+    public ICollection<AnimalTemperamento> AnimaisTemperamentos { get; set; }
+    = new List<AnimalTemperamento>();
 }
