@@ -1257,3 +1257,287 @@ gap:20px;
         gap: 12px;
     }
 }
+/* ==================================================
+   PÁGINA SOBRE NÓS
+   ================================================== */
+
+.sobre-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 70px 8%;
+    background: #f5efe6;
+}
+
+.sobre-texto {
+    width: 100%;
+    max-width: 600px;
+}
+
+.sobre-texto h1 {
+    margin-bottom: 25px;
+    color: #333333;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.sobre-texto h1 span {
+    color: #8d5cf6;
+}
+
+.sobre-texto p {
+    margin-bottom: 18px;
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.sobre-texto .btn-rosa {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.sobre-img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.sobre-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.sobre-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    padding: 60px 8%;
+    background: #ffffff;
+}
+
+.sobre-card {
+    padding: 35px;
+    border-radius: 25px;
+    background: #f8f5ff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.sobre-icone {
+    margin-bottom: 18px;
+    font-size: 42px;
+}
+
+.sobre-card h2 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 23px;
+}
+
+.sobre-card p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.sobre-final {
+    padding: 65px 20px;
+    background: #e9ddff;
+    text-align: center;
+}
+
+.sobre-final h2 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 34px;
+}
+
+.sobre-final p {
+    margin-bottom: 25px;
+    color: #555555;
+    font-size: 17px;
+}
+
+.sobre-final .btn-rosa {
+    display: inline-block;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .sobre-hero {
+        flex-direction: column;
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .sobre-texto h1 {
+        font-size: 38px;
+    }
+
+    .sobre-cards {
+        grid-template-columns: 1fr;
+        padding: 45px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre-texto h1 {
+        font-size: 32px;
+    }
+
+    .sobre-final h2 {
+        font-size: 28px;
+    }
+}
+
+/* Página Sobre Nós */
+
+.sobre-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 70px 8%;
+    background-color: #f5efe6;
+}
+
+.sobre-texto {
+    width: 50%;
+    max-width: 600px;
+}
+
+.sobre-texto h1 {
+    margin-bottom: 25px;
+    color: #333333;
+    font-size: 48px;
+}
+
+.sobre-texto h1 span {
+    color: #8d5cf6;
+}
+
+.sobre-texto p {
+    margin-bottom: 18px;
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.sobre-img {
+    width: 50%;
+    max-width: 520px;
+}
+
+.sobre-img img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.sobre-conteudo {
+    padding: 60px 8%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.sobre-conteudo h2 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 36px;
+}
+
+.sobre-introducao {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.sobre-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+.sobre-card {
+    padding: 35px 25px;
+    border-radius: 25px;
+    background-color: #f8f5ff;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.sobre-icone {
+    margin-bottom: 18px;
+    font-size: 42px;
+}
+
+.sobre-card h3 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 23px;
+}
+
+.sobre-card p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.sobre-final {
+    padding: 60px 20px;
+    background-color: #e9ddff;
+    text-align: center;
+}
+
+.sobre-final h2 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 34px;
+}
+
+.sobre-final p {
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+@media (max-width: 900px) {
+    .sobre-hero {
+        flex-direction: column;
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .sobre-texto,
+    .sobre-img {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .sobre-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre-texto h1 {
+        font-size: 34px;
+    }
+
+    .sobre-img img {
+        height: auto;
+    }
+
+    .sobre-conteudo {
+        padding: 45px 20px;
+    }
+}
