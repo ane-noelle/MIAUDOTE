@@ -25,17 +25,18 @@ public class AppDbContext : DbContext
     public DbSet<MensagemContato> MensagensContato { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
+{
+    base.OnModelCreating(modelBuilder);
 
-        ConfigurarEspecie(modelBuilder);
-        ConfigurarCidade(modelBuilder);
-        ConfigurarTemperamento(modelBuilder);
-        ConfigurarAnimal(modelBuilder);
-        ConfigurarAnimalTemperamento(modelBuilder);
-        ConfigurarSolicitacaoAdocao(modelBuilder);
-        ConfigurarMensagemContato(modelBuilder);
-    }
+    ConfigurarEspecie(modelBuilder);
+    ConfigurarCidade(modelBuilder);
+    ConfigurarTemperamento(modelBuilder);
+    ConfigurarAnimal(modelBuilder);
+    ConfigurarAnimalTemperamento(modelBuilder);
+    ConfigurarSolicitacaoAdocao(modelBuilder);
+    ConfigurarMensagemContato(modelBuilder);
+    ConfigurarDadosIniciais(modelBuilder);
+}
 
     private static void ConfigurarEspecie(ModelBuilder modelBuilder)
     {
@@ -162,4 +163,117 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<MensagemContato>()
             .HasIndex(mensagem => mensagem.DataEnvio);
     }
+    private static void ConfigurarDadosIniciais(
+    ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Especie>().HasData(
+        new Especie
+        {
+            Id = 1,
+            Nome = "Cão",
+            Ativa = true
+        },
+        new Especie
+        {
+            Id = 2,
+            Nome = "Gato",
+            Ativa = true
+        }
+    );
+
+    modelBuilder.Entity<Cidade>().HasData(
+        new Cidade
+        {
+            Id = 1,
+            Nome = "Barra Bonita",
+            Uf = "SP",
+            Ativa = true
+        },
+        new Cidade
+        {
+            Id = 2,
+            Nome = "São Paulo",
+            Uf = "SP",
+            Ativa = true
+        },
+        new Cidade
+        {
+            Id = 3,
+            Nome = "Campinas",
+            Uf = "SP",
+            Ativa = true
+        },
+        new Cidade
+        {
+            Id = 4,
+            Nome = "Rio de Janeiro",
+            Uf = "RJ",
+            Ativa = true
+        },
+        new Cidade
+        {
+            Id = 5,
+            Nome = "Belo Horizonte",
+            Uf = "MG",
+            Ativa = true
+        }
+    );
+
+    modelBuilder.Entity<Temperamento>().HasData(
+        new Temperamento
+        {
+            Id = 1,
+            Nome = "Calmo",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 2,
+            Nome = "Carinhoso",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 3,
+            Nome = "Brincalhão",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 4,
+            Nome = "Sociável",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 5,
+            Nome = "Energético",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 6,
+            Nome = "Independente",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 7,
+            Nome = "Obediente",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 8,
+            Nome = "Protetor",
+            Ativo = true
+        },
+        new Temperamento
+        {
+            Id = 9,
+            Nome = "Curioso",
+            Ativo = true
+        }
+    );
+}
 }
