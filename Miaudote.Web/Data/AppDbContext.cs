@@ -1,5 +1,6 @@
 using Miaudote.Web.Models;
 using Microsoft.EntityFrameworkCore;
+using Miaudote.Web.Enums;
 
 namespace Miaudote.Web.Data;
 
@@ -275,5 +276,155 @@ public class AppDbContext : DbContext
             Ativo = true
         }
     );
+        modelBuilder.Entity<Animal>().HasData(
+        new Animal
+        {
+            Id = 1,
+            Nome = "Max",
+            EspecieId = 1,
+            Raca = "Golden Retriever",
+            IdadeAproximadaMeses = 36,
+            Porte = PorteAnimal.Grande,
+            Genero = GeneroAnimal.Macho,
+            CidadeId = 2,
+            Descricao =
+                "Max é um cão carinhoso, brincalhão e sociável. " +
+                "Procura uma família responsável e preparada para " +
+                "oferecer atenção, cuidados e um lar seguro.",
+            Vacinado = true,
+            Castrado = true,
+            NomeArquivoImagem = "cachorro.jpg",
+            Status = StatusAnimal.Disponivel,
+            Ativo = true,
+            DataCadastro = new DateTime(2026, 8, 20)
+        },
+        new Animal
+        {
+            Id = 2,
+            Nome = "Luna",
+            EspecieId = 2,
+            Raca = "Gato sem raça definida",
+            IdadeAproximadaMeses = 24,
+            Porte = PorteAnimal.Pequeno,
+            Genero = GeneroAnimal.Femea,
+            CidadeId = 4,
+            Descricao =
+                "Luna é uma gata calma, carinhosa e independente. " +
+                "Procura um lar responsável, seguro e preparado " +
+                "para respeitar o seu período de adaptação.",
+            Vacinado = true,
+            Castrado = true,
+            NomeArquivoImagem = "luna.jpg",
+            Status = StatusAnimal.Disponivel,
+            Ativo = true,
+            DataCadastro = new DateTime(2026, 8, 20)
+        },
+        new Animal
+        {
+            Id = 3,
+            Nome = "Bob",
+            EspecieId = 1,
+            Raca = "Beagle",
+            IdadeAproximadaMeses = 48,
+            Porte = PorteAnimal.Medio,
+            Genero = GeneroAnimal.Macho,
+            CidadeId = 5,
+            Descricao =
+                "Bob é um cão energético, curioso e sociável. " +
+                "Precisa de uma família que possa oferecer passeios, " +
+                "atividades e os cuidados necessários.",
+            Vacinado = true,
+            Castrado = false,
+            NomeArquivoImagem = "bob.jpg",
+            Status = StatusAnimal.Disponivel,
+            Ativo = true,
+            DataCadastro = new DateTime(2026, 8, 20)
+        },
+        new Animal
+        {
+            Id = 4,
+            Nome = "Mimi",
+            EspecieId = 2,
+            Raca = "Siamês",
+            IdadeAproximadaMeses = 12,
+            Porte = PorteAnimal.Pequeno,
+            Genero = GeneroAnimal.Femea,
+            CidadeId = 3,
+            Descricao =
+                "Mimi é uma gata jovem, calma, curiosa e carinhosa. " +
+                "Procura uma família responsável que ofereça " +
+                "proteção, acompanhamento e carinho.",
+            Vacinado = true,
+            Castrado = true,
+            NomeArquivoImagem = "mimi.jpg",
+            Status = StatusAnimal.Disponivel,
+            Ativo = true,
+            DataCadastro = new DateTime(2026, 8, 20)
+        }
+        
+    );
+        modelBuilder.Entity<AnimalTemperamento>().HasData(
+        new AnimalTemperamento
+        {
+            AnimalId = 1,
+            TemperamentoId = 2
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 1,
+            TemperamentoId = 3
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 1,
+            TemperamentoId = 4
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 2,
+            TemperamentoId = 1
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 2,
+            TemperamentoId = 2
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 2,
+            TemperamentoId = 6
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 3,
+            TemperamentoId = 4
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 3,
+            TemperamentoId = 5
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 3,
+            TemperamentoId = 9
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 4,
+            TemperamentoId = 1
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 4,
+            TemperamentoId = 2
+        },
+        new AnimalTemperamento
+        {
+            AnimalId = 4,
+            TemperamentoId = 9
+        }
+    );
+
 }
 }
