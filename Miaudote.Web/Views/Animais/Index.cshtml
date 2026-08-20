@@ -1,0 +1,134 @@
+@model List<Miaudote.Web.Models.Animal>
+
+@{
+    ViewData["Title"] = "Animais disponíveis";
+}
+
+<section class="animais-cabecalho">
+    <h1>Animais disponíveis para adoção</h1>
+
+    <p>
+        Conheça os cães e gatos cadastrados no MIAUDOTE.
+        Estes animais são dados demonstrativos do projeto acadêmico.
+    </p>
+</section>
+
+<section class="filtros" aria-label="Filtros dos animais">
+    <select aria-label="Filtrar por cidade">
+        <option value="">Todas as cidades</option>
+    </select>
+
+    <select aria-label="Filtrar por espécie">
+        <option value="">Todas as espécies</option>
+    </select>
+
+    <select aria-label="Filtrar por porte">
+        <option value="">Todos os portes</option>
+    </select>
+</section>
+
+<section class="pets-lista">
+    @if (Model.Count == 0)
+    {
+        <div class="sem-animais">
+            <h2>Nenhum animal disponível</h2>
+
+            <p>
+                Não existem animais disponíveis para adoção neste momento.
+            </p>
+        </div>
+    }
+    else
+    {
+        @foreach (var animal in Model)
+        {
+            var anos = animal.IdadeAproximadaMeses / 12;
+            var meses = animal.IdadeAproximadaMeses % 12;
+
+            var idadeFormatada = "";
+
+            if (anos > 0 && meses > 0)
+            {
+                idadeFormatada =
+                    $"{anos} {(anos == 1 ? "ano" : "anos")} e " +
+                    $"{meses} {(meses == 1 ? "mês" : "meses")}";
+            }
+            else if (anos > 0)
+            {
+                idadeFormatada =
+                    $"{anos} {(anos == 1 ? "ano" : "anos")}";
+            }
+            else
+            {
+                idadeFormatada =
+                    $"{meses} {(meses == 1 ? "mês" : "meses")}";
+            }
+
+            var nomeImagem = string.IsNullOrWhiteSpace(
+                animal.NomeArquivoImagem
+            )
+                ? "sem-imagem.png"
+                : animal.NomeArquivoImagem;
+
+            var caminhoImagem = "/imagens/" + nomeImagem;
+
+            <article class="pet-card">
+                @caminhoImagem
+
+                <span class="tag">
+                    @(animal.Especie?.Nome ?? "Espécie não informada")
+                </span>
+
+                <div class="idade">
+                    @idadeFormatada
+                </div>
+
+                <h3>
+                    @animal.Nome
+                </h3>
+
+                <p>
+                    @(string.IsNullOrWhiteSpace(animal.Raca)
+                        ? "Raça não informada"
+                        : animal.Raca)
+                </p>
+
+                <p>
+                    📍 @(animal.Cidade?.Nome ?? "Cidade não informada")
+                    @if (!string.IsNullOrWhiteSpace(animal.Cidade?.Uf))
+                    {
+                        <span>, @animal.Cidade.Uf</span>
+                    }
+                </p>
+
+                <div class="tags">
+                    @foreach (
+                        var animalTemperamento
+                        in animal.AnimaisTemperamentos)
+                    {
+                        if (animalTemperamento.Temperamento != null)
+                        {
+                            <span>
+                                @animalTemperamento.Temperamento.Nome
+                            </span>
+                        }
+                    }
+                </div>
+
+                <div class="status">
+                    <span>
+                        @(animal.Vacinado
+                            ? "✔ Vacinado"
+                            : "✖ Não vacinado")
+                    </span>
+
+                    <span>
+                        @(animal.Castrado
+                            ? "✔ Castrado"
+                            : "✖ Não castrado")
+                    </span>
+                </div>
+            </article>
+        }
+    }
+</section>

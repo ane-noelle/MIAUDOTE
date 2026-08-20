@@ -1541,3 +1541,38 @@ gap:20px;
         padding: 45px 20px;
     }
 }
+/* Página de listagem dos animais */
+
+.animais-cabecalho {
+    padding: 60px 20px 35px;
+    background-color: #f5efe6;
+    text-align: center;
+}
+
+.animais-cabecalho h1 {
+    margin-bottom: 15px;
+    color: #8d5cf6;
+    font-size: 42px;
+}
+
+.animais-cabecalho p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .animais-cabecalho {
+        padding: 45px 20px 30px;
+    }
+
+    .animais-cabecalho h1 {
+        font-size: 32px;
+    }
+
+    .animais-cabecalho p {
+        font-size: 16px;
+    }
+}
