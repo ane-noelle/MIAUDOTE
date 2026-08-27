@@ -1,0 +1,63 @@
+@model Miaudote.Web.Models.SolicitacaoAdocao
+
+@{
+    ViewData["Title"] = "Solicitar Adoção";
+}
+
+<div class="container">
+
+    <h1>Solicitação de Adoção</h1>
+
+    <h2>@Model.Animal?.Nome</h2>
+
+    <p>
+        <strong>Espécie:</strong>
+        @(Model.Animal?.Especie?.Nome ?? "Não informada")
+    </p>
+
+    <p>
+        <strong>Cidade:</strong>
+        @(Model.Animal?.Cidade?.Nome ?? "Não informada")
+    </p>
+
+    <hr />
+
+    <form>
+
+        <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+        </div>
+
+        <div>
+            <label>E-mail</label>
+            <input type="email" />
+        </div>
+
+        <div>
+            <label>Telefone</label>
+            <input type="text" />
+        </div>
+
+        <div>
+            <label>Cidade</label>
+            <input type="text" />
+        </div>
+
+        <div>
+            <label>Endereço</label>
+            <input type="text" />
+        </div>
+
+        <div>
+            <label>Motivo da adoção</label>
+            <textarea rows="5"></textarea>
+        </div>
+
+        <button type="submit">
+            Enviar Solicitação
+        </button>
+
+    </form>
+
+</div>
