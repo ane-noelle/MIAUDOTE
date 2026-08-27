@@ -72,8 +72,10 @@
 
             var caminhoImagem = "/imagens/" + nomeImagem;
 
-            <article class="pet-card">
-                @caminhoImagem
+          <article class="pet-card">
+    <img src="@caminhoImagem"
+         alt="@animal.Nome"
+         class="pet-imagem" />
 
                 <span class="tag">
                     @(animal.Especie?.Nome ?? "Espécie não informada")
@@ -128,6 +130,14 @@
                             : "✖ Não castrado")
                     </span>
                 </div>
+                <div class="acoes-animal">
+    <a asp-controller="Animais"
+       asp-action="Detalhes"
+       asp-route-id="@animal.Id"
+       class="btn-detalhes">
+        Ver Detalhes
+    </a>
+</div>
             </article>
         }
     }

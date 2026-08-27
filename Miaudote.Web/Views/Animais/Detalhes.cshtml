@@ -1,0 +1,66 @@
+@model Miaudote.Web.Models.Animal
+
+@{
+    ViewData["Title"] = Model.Nome;
+}
+
+<div class="container">
+    <h1>@Model.Nome</h1>
+
+    <p>
+        <strong>Espécie:</strong>
+        @(Model.Especie?.Nome ?? "Não informada")
+    </p>
+
+    <p>
+        <strong>Raça:</strong>
+        @(string.IsNullOrWhiteSpace(Model.Raca)
+            ? "Não informada"
+            : Model.Raca)
+    </p>
+
+    <p>
+        <strong>Cidade:</strong>
+        @(Model.Cidade?.Nome ?? "Não informada")
+    </p>
+
+    <p>
+        <strong>Descrição:</strong>
+    </p>
+
+    <p>
+        @Model.Descricao
+    </p>
+
+    <h3>Temperamentos</h3>
+
+    <ul>
+        @foreach (var item in Model.AnimaisTemperamentos)
+        {
+            if (item.Temperamento != null)
+            {
+                <li>@item.Temperamento.Nome</li>
+            }
+        }
+    </ul>
+
+    <p>
+        <strong>Vacinado:</strong>
+        @(Model.Vacinado ? "Sim" : "Não")
+    </p>
+
+ <p>
+    <strong>Castrado:</strong>
+    @(Model.Castrado ? "Sim" : "Não")
+</p>
+
+<div class="acoes-animal">
+    <a class="btn-adotar"
+       href="#">
+
+<p>
+    <a asp-controller="Animais"
+       asp-action="Index">
+        ← Voltar para lista de animais
+    </a>
+</p>

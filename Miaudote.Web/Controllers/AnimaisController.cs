@@ -36,4 +36,24 @@ public class AnimaisController : Controller
 
         return View(animais);
     }
+
+    public async Task<IActionResult> Detalhes(int id)
+    {
+        var animal = await _contexto.Animais
+            .AsNoTracking()
+            .Include(a => a.Especie)
+            .Include(a => a.Cidade)
+            .Include(a => a.AnimaisTemperamentos)
+                .ThenInclude(at => at.Temperamento)
+            .FirstOrDefaultAsync(a =>
+                a.Id == id &&
+                a.Ativo);
+
+        if (animal == null)
+        {
+            return NotFound();
+        }
+
+        return View(animal);
+    }
 }
