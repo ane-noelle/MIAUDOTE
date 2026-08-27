@@ -56,7 +56,7 @@ public class AdocaoController : Controller
         }
 
         solicitacao.DataSolicitacao = DateTime.Now;
-        
+
         solicitacao.Id = 0;
 
         await _contexto.SolicitacoesAdocao
@@ -67,8 +67,11 @@ public class AdocaoController : Controller
         TempData["Sucesso"] =
             "Solicitação enviada com sucesso!";
 
-        return RedirectToAction(
-            nameof(Solicitar),
-            new { id = solicitacao.AnimalId });
+        TempData["Sucesso"] =
+    "Solicitação enviada com sucesso!";
+
+return RedirectToAction(
+    nameof(Solicitar),
+    new { id = solicitacao.AnimalId });
     }
 }

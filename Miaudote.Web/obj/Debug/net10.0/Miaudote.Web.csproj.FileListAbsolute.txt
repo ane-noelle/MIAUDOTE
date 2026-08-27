@@ -187,4 +187,4 @@ C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\bin\Debug\net10.0\zh-Hant\Microsoft.
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\Miaudote.Web.csproj.AssemblyReference.cache
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\Miaudote.F7301E67.Up2Date
 C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\bin\Debug\net10.0\appsettings.Development.json
-C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\8pnevwdbvv-{0}-r8d686ppcq-r8d686ppcq.gz
+C:\Users\etec\Desktop\MIAUDOTE\Miaudote.Web\obj\Debug\net10.0\compressed\8pnevwdbvv-{0}-e1rtm68wsg-e1rtm68wsg.gz

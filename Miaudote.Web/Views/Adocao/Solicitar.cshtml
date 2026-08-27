@@ -7,6 +7,12 @@
 <div class="container">
 
     <h1>Solicitação de Adoção</h1>
+    @if (TempData["Sucesso"] != null)
+{
+    <div class="mensagem-sucesso">
+        @TempData["Sucesso"]
+    </div>
+}
 
     <h2>@Model.Animal?.Nome</h2>
 
