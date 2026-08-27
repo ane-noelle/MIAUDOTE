@@ -74,4 +74,14 @@ return RedirectToAction(
     nameof(Solicitar),
     new { id = solicitacao.AnimalId });
     }
+    public async Task<IActionResult> Solicitacoes()
+{
+    var solicitacoes = await _contexto.SolicitacoesAdocao
+        .AsNoTracking()
+        .Include(s => s.Animal)
+        .OrderByDescending(s => s.DataSolicitacao)
+        .ToListAsync();
+
+    return View(solicitacoes);
+}
 }
