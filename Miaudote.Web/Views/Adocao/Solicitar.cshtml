@@ -22,36 +22,47 @@
 
     <hr />
 
-    <form>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+
+        @Html.AntiForgeryToken()
+
+        <input asp-for="AnimalId" type="hidden" />
 
         <div>
-            <label>Nome Completo</label>
-            <input type="text" />
+            <label asp-for="NomeCompleto"></label>
+            <input asp-for="NomeCompleto" />
+            <span asp-validation-for="NomeCompleto"></span>
         </div>
 
         <div>
-            <label>E-mail</label>
-            <input type="email" />
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
         </div>
 
         <div>
-            <label>Telefone</label>
-            <input type="text" />
+            <label asp-for="Telefone"></label>
+            <input asp-for="Telefone" />
+            <span asp-validation-for="Telefone"></span>
         </div>
 
         <div>
-            <label>Cidade</label>
-            <input type="text" />
+            <label asp-for="Cidade"></label>
+            <input asp-for="Cidade" />
+            <span asp-validation-for="Cidade"></span>
         </div>
 
         <div>
-            <label>Endereço</label>
-            <input type="text" />
+            <label asp-for="Endereco"></label>
+            <input asp-for="Endereco" />
+            <span asp-validation-for="Endereco"></span>
         </div>
 
         <div>
-            <label>Motivo da adoção</label>
-            <textarea rows="5"></textarea>
+            <label asp-for="MotivoAdocao"></label>
+            <textarea asp-for="MotivoAdocao" rows="5"></textarea>
+            <span asp-validation-for="MotivoAdocao"></span>
         </div>
 
         <button type="submit">

@@ -38,4 +38,37 @@ public class AdocaoController : Controller
 
         return View(solicitacao);
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Solicitar(
+        SolicitacaoAdocao solicitacao)
+    {
+        if (!ModelState.IsValid)
+        {
+            solicitacao.Animal = await _contexto.Animais
+                .Include(a => a.Especie)
+                .Include(a => a.Cidade)
+                .FirstOrDefaultAsync(a =>
+                    a.Id == solicitacao.AnimalId);
+
+            return View(solicitacao);
+        }
+
+        solicitacao.DataSolicitacao = DateTime.Now;
+        
+        solicitacao.Id = 0;
+
+        await _contexto.SolicitacoesAdocao
+            .AddAsync(solicitacao);
+
+        await _contexto.SaveChangesAsync();
+
+        TempData["Sucesso"] =
+            "Solicitação enviada com sucesso!";
+
+        return RedirectToAction(
+            nameof(Solicitar),
+            new { id = solicitacao.AnimalId });
+    }
 }
