@@ -1,0 +1,39 @@
+@model List<Miaudote.Web.Models.MensagemContato>
+
+@{
+    ViewData["Title"] = "Mensagens";
+}
+
+<h1>Mensagens Recebidas</h1>
+
+@if (!Model.Any())
+{
+    <p>Nenhuma mensagem encontrada.</p>
+}
+else
+{
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Assunto</th>
+                <th>Mensagem</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Email</td>
+                    <td>@item.Assunto</td>
+                    <td>@item.Mensagem</td>
+                    <td>@item.DataEnvio</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

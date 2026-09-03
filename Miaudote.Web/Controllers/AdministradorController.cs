@@ -14,7 +14,7 @@ public class AdministradorController : Controller
         _contexto = contexto;
     }
 
-    public async Task<IActionResult> Index()
+       public async Task<IActionResult> Index()
     {
         ViewBag.TotalAnimais =
             await _contexto.Animais.CountAsync();
@@ -35,5 +35,15 @@ public class AdministradorController : Controller
                     s.Status == StatusSolicitacao.Recusada);
 
         return View();
+    }
+
+    public async Task<IActionResult> Mensagens()
+    {
+        var mensagens = await _contexto.MensagensContato
+            .AsNoTracking()
+            .OrderByDescending(m => m.DataEnvio)
+            .ToListAsync();
+
+        return View(mensagens);
     }
 }
