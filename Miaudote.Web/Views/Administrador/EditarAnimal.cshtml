@@ -1,0 +1,38 @@
+@model Miaudote.Web.Models.Animal
+
+@{
+    ViewData["Title"] = "Editar Animal";
+}
+
+<h1>Editar Animal</h1>
+
+<form method="post">
+
+    <input asp-for="Id" type="hidden" />
+
+    <div>
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Raca"></label>
+        <input asp-for="Raca" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Descricao"></label>
+        <textarea asp-for="Descricao" rows="5"></textarea>
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Salvar Alterações
+    </button>
+
+</form>
