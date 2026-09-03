@@ -93,4 +93,20 @@ public async Task<IActionResult> EditarAnimal(Animal animal)
 
     return RedirectToAction(nameof(Animais));
 }
+public async Task<IActionResult> ExcluirAnimal(int id)
+{
+    var animal = await _contexto.Animais
+        .FirstOrDefaultAsync(a => a.Id == id);
+
+    if (animal == null)
+    {
+        return NotFound();
+    }
+
+    _contexto.Animais.Remove(animal);
+
+    await _contexto.SaveChangesAsync();
+
+    return RedirectToAction(nameof(Animais));
+}
 }

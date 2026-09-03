@@ -32,6 +32,14 @@
                        asp-route-id="@animal.Id">
                         Editar
                     </a>
+
+                    |
+
+                    <a asp-controller="Administrador"
+                       asp-action="ExcluirAnimal"
+                       asp-route-id="@animal.Id">
+                        Excluir
+                    </a>
                 </td>
             </tr>
         }
