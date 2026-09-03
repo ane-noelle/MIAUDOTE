@@ -6,27 +6,34 @@
 
 <h1>Solicitações de Adoção</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Animal</th>
-            <th>Nome</th>
-            <th>Cidade</th>
-            <th>Status</th>
-            <th>Data</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (!Model.Any())
+{
+    <p>Nenhuma solicitação encontrada.</p>
+}
+else
+{
+    <table border="1" cellpadding="10">
+        <thead>
             <tr>
-                <td>@item.Animal?.Nome</td>
-                <td>@item.NomeCompleto</td>
-                <td>@item.Cidade</td>
-                <td>@item.Status</td>
-                <td>@item.DataSolicitacao</td>
+                <th>Animal</th>
+                <th>Nome</th>
+                <th>Cidade</th>
+                <th>Status</th>
+                <th>Data</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Animal?.Nome</td>
+                    <td>@item.NomeCompleto</td>
+                    <td>@item.Cidade</td>
+                    <td>@item.Status</td>
+                    <td>@item.DataSolicitacao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
