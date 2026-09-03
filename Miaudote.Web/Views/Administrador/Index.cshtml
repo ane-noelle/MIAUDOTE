@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Painel Administrativo";
+}
+
+<h1>Painel Administrativo</h1>
+
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+    <div style="border:1px solid #ccc; padding:20px;">
+        <h3>Animais</h3>
+        <p>@ViewBag.TotalAnimais</p>
+    </div>
+
+    <div style="border:1px solid #ccc; padding:20px;">
+        <h3>Pendentes</h3>
+        <p>@ViewBag.Pendentes</p>
+    </div>
+
+    <div style="border:1px solid #ccc; padding:20px;">
+        <h3>Aprovadas</h3>
+        <p>@ViewBag.Aprovadas</p>
+    </div>
+
+    <div style="border:1px solid #ccc; padding:20px;">
+        <h3>Recusadas</h3>
+        <p>@ViewBag.Recusadas</p>
+    </div>
+
+</div>
+
+<hr />
+
+<p>
+    <a asp-controller="Adocao"
+       asp-action="Solicitacoes">
+        Gerenciar Solicitações
+    </a>
+</p>
+
+<p>
+    <a asp-controller="Animais"
+       asp-action="Index">
+        Ver Animais
+    </a>
+</p>
+``

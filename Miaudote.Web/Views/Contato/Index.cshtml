@@ -1,10 +1,11 @@
+@model Miaudote.Web.Models.MensagemContato
+
 @{
     ViewData["Title"] = "Contato";
 }
 
 <section class="contato-hero">
     <div class="contato-texto">
-        
 
         <h1>
             Fale com <span>a gente!</span>
@@ -14,6 +15,7 @@
             Estamos aqui para tirar dúvidas, ouvir sugestões ou ajudar
             no que for preciso. Será um prazer falar com você!
         </p>
+
     </div>
 
     <div class="contato-img">
@@ -23,11 +25,10 @@
 </section>
 
 <section class="contato-box">
-    <div class="info-contato">
-        <h3>Outros canais</h3>
 
-        <div class="item">
-            <span aria-hidden="true">📧</span>
+    <div class="info-contato">
+
+        <h3>Outrosidden="true">📧</span>
 
             <div>
                 <p class="titulo">E-mail</p>
@@ -43,48 +44,71 @@
                 <p>Canal demonstrativo do projeto</p>
             </div>
         </div>
+
     </div>
 
     <div class="form-contato">
+
         <h3>Envie sua mensagem</h3>
 
-        <form id="contatoForm">
+        @if (TempData["Sucesso"] != null)
+        {
+            <div class="mensagem-sucesso">
+                @TempData["Sucesso"]
+            </div>
+        }
+
+     <form method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="All"></div>
+
+            <input type="hidden"
+                   asp-for="Id" />
+
             <div class="linha">
+
                 <input type="text"
-                       id="nome"
-                       name="nome"
+                       name="Nome"
                        placeholder="Nome completo"
-                       maxlength="150="email"
-                       id="email"
-                       name="email"
+                       maxlength="150"
+                       required />
+
+                <input type="email"
+                       name="Email"
                        placeholder="E-mail"
                        maxlength="254"
                        required />
+
             </div>
 
             <input type="text"
-                   id="assunto"
-                   name="assunto"
+                   name="Assunto"
                    placeholder="Assunto"
                    maxlength="150"
                    required />
 
-            <textarea id="mensagem"
-                      name="mensagem"
-                      placeholder="Sua mensagem"
+            <textarea name="Mensagem"
                       rows="5"
                       maxlength="2000"
+                      placeholder="Sua mensagem"
                       required></textarea>
 
             <button type="submit">
                 ✈ Enviar mensagem
             </button>
+
         </form>
+
     </div>
+
 </section>
 
 <section class="cta-contato">
+
     <div class="cta-texto">
+
         <h3>Juntos por mais amor e adoção!</h3>
 
         <p>
@@ -92,12 +116,16 @@
             do projeto MIAUDOTE.
         </p>
 
-        /#pets
+        /Animais
             ♡ Ver animais disponíveis
         </a>
+
     </div>
 
-  <div class="cta-img">
-    <img src="/imagens/contato.png"
-         alt="Ilustração da seção de contato" />
-</div>
+    <div class="cta-img">
+
+        /imagens/contato.png
+
+    </div>
+
+</section>
