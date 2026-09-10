@@ -21,7 +21,8 @@ public class LoginController : Controller
                 "Administrador");
         }
 
-        ViewBag.Erro = "E-mail ou senha inválidos.";
+        ViewBag.Erro =
+            "E-mail ou senha inválidos.";
 
         return View();
     }

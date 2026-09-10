@@ -4,63 +4,107 @@
     ViewData["Title"] = Model.Nome;
 }
 
-<div class="container">
+<div class="pet-page">
+
+    <div class="detalhe-pet">
+
+        <div class="pet-foto">
+
+            <img src="/imagens/@Model.NomeArquivoImagem"
+                 alt="@Model.Nome" />
+
+        </div>
+
+        <div class="pet-info">
+
+           <div class="top-info">
+
     <h1>@Model.Nome</h1>
 
-    <p>
-        <strong>Espécie:</strong>
-        @(Model.Especie?.Nome ?? "Não informada")
-    </p>
+    <div class="tipo">
+        @(Model.Especie?.Nome ?? "Pet")
+    </div>
 
-    <p>
-        <strong>Raça:</strong>
-        @(string.IsNullOrWhiteSpace(Model.Raca)
-            ? "Não informada"
-            : Model.Raca)
-    </p>
+</div>
 
-    <p>
-        <strong>Cidade:</strong>
-        @(Model.Cidade?.Nome ?? "Não informada")
-    </p>
+            <h2>
+                @(string.IsNullOrWhiteSpace(Model.Raca)
+                    ? "Sem raça definida"
+                    : Model.Raca)
+            </h2>
 
-    <p>
-        <strong>Descrição:</strong>
-    </p>
+            <p class="cidade">
+                📍 @(Model.Cidade?.Nome ?? "Cidade não informada")
+            </p>
 
-    <p>
-        @Model.Descricao
-    </p>
+            <p class="descricao">
+                @Model.Descricao
+            </p>
 
-    <h3>Temperamentos</h3>
+            <div class="atributos">
 
-    <ul>
-        @foreach (var item in Model.AnimaisTemperamentos)
-        {
-            if (item.Temperamento != null)
-            {
-                <li>@item.Temperamento.Nome</li>
-            }
-        }
-    </ul>
+                <div class="box">
+                    <p>Idade</p>
+                    <h3>@(Model.IdadeAproximadaMeses / 12) anos</h3>
+                </div>
 
-    <p>
-        <strong>Vacinado:</strong>
-        @(Model.Vacinado ? "Sim" : "Não")
-    </p>
+                <div class="box">
+                    <p>Porte</p>
+                    <h3>@Model.Porte</h3>
+                </div>
 
- <p>
-    <strong>Castrado:</strong>
-    @(Model.Castrado ? "Sim" : "Não")
-</p>
+                <div class="box">
+                    <p>Gênero</p>
+                    <h3>@Model.Genero</h3>
+                </div>
 
-<div class="acoes-animal">
-    <a class="btn-adotar"
-       href="#">
+                <div class="box">
+                    <p>Vacinado</p>
+                    <h3>
+                        @(Model.Vacinado ? "Sim" : "Não")
+                    </h3>
+                </div>
 
-<p>
-    <a asp-controller="Home"
-   asp-action="Index">
-    ← Voltar para página inicial
-</a>
-</p>
+            </div>
+
+            <h3 class="temperamento-titulo">
+                Temperamento
+            </h3>
+
+            <div class="temperamento">
+
+                @foreach (var item in Model.AnimaisTemperamentos)
+                {
+                    if (item.Temperamento != null)
+                    {
+                        <span>
+                            @item.Temperamento.Nome
+                        </span>
+                    }
+                }
+
+            </div>
+
+            <a class="adotar-btn"
+               asp-controller="Adocao"
+               asp-action="Solicitar"
+               asp-route-id="@Model.Id">
+
+                Quero Adotar @Model.Nome
+            </a>
+
+            <div style="margin-top:25px;">
+
+                <a asp-controller="Home"
+                   asp-action="Index">
+
+                    ← Voltar
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,113 @@
+@model Miaudote.Web.Models.Animal
+
+@{
+    ViewData["Title"] = "Novo Animal";
+}
+
+<h1>Novo Animal</h1>
+
+<form method="post">
+
+    <div>
+        <label>Nome</label>
+        <input asp-for="Nome" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Espécie</label>
+        <select asp-for="EspecieId">
+            <option value="1">Cão</option>
+            <option value="2">Gato</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Cidade</label>
+        <select asp-for="CidadeId">
+            <option value="1">Barra Bonita</option>
+            <option value="2">Jaú</option>
+            <option value="3">Botucatu</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Raça</label>
+        <input asp-for="Raca" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Idade (meses)</label>
+        <input asp-for="IdadeAproximadaMeses" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Porte</label>
+        <select asp-for="Porte">
+            <option value="1">Pequeno</option>
+            <option value="2">Médio</option>
+            <option value="3">Grande</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Gênero</label>
+        <select asp-for="Genero">
+            <option value="1">Macho</option>
+            <option value="2">Fêmea</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Status</label>
+        <select asp-for="Status">
+            <option value="1">Disponível</option>
+            <option value="2">Em Processo</option>
+            <option value="3">Adotado</option>
+            <option value="4">Indisponível</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Descrição</label>
+        <textarea asp-for="Descricao" rows="5"></textarea>
+    </div>
+
+    <br />
+
+    <div>
+        <label>
+            <input asp-for="Vacinado" />
+            Vacinado
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input asp-for="Castrado" />
+            Castrado
+        </label>
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Cadastrar Animal
+    </button>
+
+</form>

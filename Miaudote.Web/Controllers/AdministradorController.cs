@@ -14,6 +14,11 @@ public class AdministradorController : Controller
     {
         _contexto = contexto;
     }
+    [HttpGet]
+public IActionResult NovoAnimal()
+{
+    return View(new Animal());
+}
 
        public async Task<IActionResult> Index()
     {
@@ -104,6 +109,23 @@ public async Task<IActionResult> ExcluirAnimal(int id)
     }
 
     _contexto.Animais.Remove(animal);
+
+    await _contexto.SaveChangesAsync();
+
+    return RedirectToAction(nameof(Animais));
+}
+[HttpPost]
+public async Task<IActionResult> NovoAnimal(Animal animal)
+{
+    if (!ModelState.IsValid)
+    {
+        return View(animal);
+    }
+
+    animal.DataCadastro = DateTime.Now;
+    animal.Ativo = true;
+
+    await _contexto.Animais.AddAsync(animal);
 
     await _contexto.SaveChangesAsync();
 
